@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(3, 3, 3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif; /* Default font */
+}
+
+.container {
+  background-color: #c24000;
+  height:  564px;
+  width: 920px;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.8em;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: black;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center the input and button */
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.input-group input {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 2px solid black;
+  outline: none;
+  font-size: 1em;
+  width: 50%;
+  background-color: transparent; /* Keep this */
+  color: black; /* Keep this */
+  text-align: center;
+  caret-color: black; /* added this to keep cursor to be visible on text input */
+}
+
+.input-group input::placeholder {
+  font-weight: 700;
+  color: black; /* Keep this */
+}
+
+/* Add this to override any default background */
+.input-group input:focus {
+    background-color: transparent;  /* forces the input to be transparent no matter what */
+    color: black; /* Keep this */
+}
+
+.input-group button {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black; /* Added border */
+  border-radius: 25px; /* Adjusted for rounded button look */
+  width: auto; /* Adjusted width */
+  height: auto; /* Adjusted height */
+  padding: 12px 20px; /* Added padding */
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold; /*Make the text bold*/
+}
+
+.input-group button:hover {
+  background-color: black;
+  border-color: #c24000;
+  color: #c24000;
+}
+
+.results-grid {
+  display: flex; /* Changed to flex to allow continuous boxes */
+  width: 752px;
+  border: 2px solid black;
+  border-radius: 48px;
+  overflow: hidden; /* Ensures the rounded corners are respected */
+  height: 252px; /* Set the height of the grid */
+}
+
+.result-box {
+  flex: 1; /* Each box takes up equal space */
+  background-color: #c24000;
+  padding: 15px;
+  text-align: center;
+  position: relative; /* To position the divider lines */
+  width: 756px; /* Set the width of the box */
+}
+
+/* Vertical lines */
+.result-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10px; /* Gap from the top */
+  bottom: 10px; /* Gap from the bottom */
+  right: 0;
+  width: 2px;
+  background-color: black;
+}
+
+.result-box h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.result-box p {
+  font-size: 1em;
+  color: black;
+}
+
+.clear-btn {
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: 2px solid black;
+  font-weight: 800;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.clear-btn:hover {
+  background-color: black;
+  border-color: #c24000;
+  color: #c24000;
+}

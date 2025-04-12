@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji-Based Sentiment Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="margin-bottom: 0;">EMOJI-BASED SENTIMENT</h1>
+        <h1 style="margin-top: 0;">ANALYSIS TOOL</h1>
+        <div class="input-group">
+            <input type="text" id="textInput" placeholder="Enter a Sentence">
+            <button id="analyzeButton">Analyze</button>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-box">
+                <h2 style="font-size: 14px; font-weight: 800;">Given Sentence</h2>
+                <p id="givenSentence"></p>
+            </div>
+            <div class="result-box">
+                <h2 style="font-size: 14px; font-weight: 800;">Predicted Emoji Sentiment</h2>
+                <p id="predictedEmoji"></p>
+            </div>
+            <div class="result-box">
+                <h2 style="font-size: 14px; font-weight: 800;">Sentiment Score</h2>
+                <p id="sentimentAccuracy"></p>
+            </div>
+        </div>
+
+        <button class="clear-btn" id="clearButton">CLEAR RESULTS</button>
+    </div>
+
+    <!-- Then load your script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
