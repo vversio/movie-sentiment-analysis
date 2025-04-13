@@ -44,11 +44,11 @@ h1 {
 .input-group input {
   padding: 12px 20px;
   border-radius: 25px;
-  border: 2px solid black;
+  border: 3.5px solid black;
   outline: none;
   font-size: 1em;
   width: 50%;
-  background-color: transparent; /* Keep this */
+  background-color: #e3dac9; /* Keep this */
   color: black; /* Keep this */
   text-align: center;
   caret-color: black; /* added this to keep cursor to be visible on text input */
@@ -59,36 +59,48 @@ h1 {
   color: black; /* Keep this */
 }
 
-/* Add this to override any default background */
-.input-group input:focus {
-    background-color: transparent;  /* forces the input to be transparent no matter what */
-    color: black; /* Keep this */
-}
 
 .input-group button {
-  background-color: transparent;
-  color: black;
-  border: 2px solid black; /* Added border */
-  border-radius: 25px; /* Adjusted for rounded button look */
-  width: auto; /* Adjusted width */
-  height: auto; /* Adjusted height */
-  padding: 12px 20px; /* Added padding */
+  background-color: black;
+  color: #c24000;
+  border: 2px solid #c24000;
+  border-radius: 25px;
+  width: auto;
+  height: auto;
+  padding: 12px 20px;
   font-size: 1em;
   cursor: pointer;
   margin-left: 10px;
-  font-weight: bold; /*Make the text bold*/
+  font-weight: bold;
 }
 
 .input-group button:hover {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+
+.clear-btn {
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: 2px solid black;
+  font-weight: 800;
   background-color: black;
-  border-color: #c24000;
   color: #c24000;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.clear-btn:hover {
+  background-color: transparent;
+  border-color: #000000;
+  color: black;
 }
 
 .results-grid {
   display: flex; /* Changed to flex to allow continuous boxes */
   width: 752px;
-  border: 2px solid black;
+  border: 3.5px solid black;
   border-radius: 48px;
   overflow: hidden; /* Ensures the rounded corners are respected */
   height: 252px; /* Set the height of the grid */
@@ -96,7 +108,7 @@ h1 {
 
 .result-box {
   flex: 1; /* Each box takes up equal space */
-  background-color: #c24000;
+  background-color: #e3dac9;
   padding: 15px;
   text-align: center;
   position: relative; /* To position the divider lines */
@@ -107,8 +119,8 @@ h1 {
 .result-box:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 10px; /* Gap from the top */
-  bottom: 10px; /* Gap from the bottom */
+  top: 12px; /* Gap from the top */
+  bottom: 12px; /* Gap from the bottom */
   right: 0;
   width: 2px;
   background-color: black;
@@ -125,19 +137,7 @@ h1 {
   color: black;
 }
 
-.clear-btn {
-  padding: 12px 30px;
-  border-radius: 25px;
-  border: 2px solid black;
-  font-weight: 800;
-  background-color: transparent;
-  color: black;
-  cursor: pointer;
-  margin-top: 30px;
-}
-
-.clear-btn:hover {
-  background-color: black;
-  border-color: #c24000;
-  color: #c24000;
+#predictedEmoji {
+  font-size: 2.5em;
+  margin: 0;
 }
